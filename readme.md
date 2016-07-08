@@ -28,16 +28,18 @@ return (
   }
 )
 
+
+
 # 注册 (./signup)
 
-get: {
+post: {
+  'name' : { name }
   'token': { token }
 }
 
 return (
   suc:{
     'code' : '1'
-    'id' : { id }
   }
   fail:{
     'code' : '0'
@@ -45,10 +47,12 @@ return (
   }
 )
 
+
+
 # 登陆 (./signin)
 
 post: {
-  'id': { id }
+  'name' : { name }
   'token': { token }
 }
 

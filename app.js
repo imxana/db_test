@@ -8,9 +8,12 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+var db = require('./lib/db')();
 var bc = require('./lib/bc');
 var wp = require('./lib/wp');
 var sign = require('./lib/sign');
+var note = require('./lib/note');
+
 
 var app = express();
 
@@ -32,6 +35,7 @@ app.use('/users', users);
 bc(app);
 wp(app);
 sign(app);
+note(app);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

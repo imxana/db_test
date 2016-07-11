@@ -39,7 +39,8 @@ post: {
 
 return (
   suc:{
-    'code' : '1'
+    'code' : '1',
+    'userid' : { userid }
   }
   fail:{
     'code' : '0'
@@ -59,7 +60,7 @@ post: {
 return (
   suc:{
     'code' : '1'
-    'notes' : { [noteid] }
+    'userid' : { userid }
   }
   fail:{
     'code' : '0',
@@ -70,15 +71,14 @@ return (
 
 # 记事本 (./note)
 
+
 ## (./note/add)
 
 post: {
-  'id' : { id },
-  'note' : {
-    'title': { title },
-    'content': { content },
-    'time' : { db.time() }
-  },
+  'userid' : { userid },
+  'title': { title },
+  'content': { content },
+  'time' : { time }
 }
 
 return: (
@@ -87,6 +87,7 @@ return: (
     'noteid': { noteid },
   }
 )
+
 
 ## (./note/query)
 
@@ -98,18 +99,21 @@ post: {
 return: (
   suc: {
     'code': '1',
-    'note' : {
-      'title': { title },
-      'content': { content },
-      'time' : { time }
-    },
+    'title': { title },
+    'content': { content },
+    'time' : { time }
+  }
+  fail:{
+    'code': '0',
+    'codeState' : { ...codeState }
   }
 )
+
 
 ## (./note/del)
 
 post: {
-  'id': { id }
+  'userid': { userid }
   'noteid': { noteid },
   'token': { token }
 }
@@ -117,5 +121,9 @@ post: {
 return: (
   suc: {
     'code': '1',
+  }
+  fail:{
+    'code': '0',
+    'codeState' : { ...codeState }
   }
 )

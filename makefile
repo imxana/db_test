@@ -1,5 +1,5 @@
 start:
-	@npm start
+	@supervisor bin/www
 test:
 	curl -d 'name=(haha=ha)' 'http://localhost:3000/test'
 bc:
@@ -14,3 +14,9 @@ si:
 	@curl -d 'name=Ruri' 'http://localhost:3000/signin'
 na:
 	@curl -d 'userid=Yvo1D5X9p4c58GAJ&title=imodo&content=hmm!' 'http://localhost:3000/note/add'
+nd:
+	@curl -d 'userid=Yvo1D5X9p4c58GAJ&noteid=fzfBYbbmKLErqwRl' 'http://localhost:3000/note/del'
+ns:
+	@curl -d 'userid=Yvo1D5X9p4c58GAJ' 'http://localhost:3000/note/show'
+nq:
+	@curl -d 'noteid=E5z3Szl0PMDbxGSY' 'http://localhost:3000/note/query'

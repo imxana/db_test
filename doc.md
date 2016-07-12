@@ -9,7 +9,8 @@ return (
   {
     'state': 'hello world!'
   }
-)```
+)
+```
 
 # 欢迎页 (./wp)
 
@@ -30,9 +31,6 @@ return (
   }
 )
 ```
-
-
-
 # 注册 (./signup)
 
 ```
@@ -51,7 +49,6 @@ return (
   }
 )
 ```
-
 
 # 登陆 (./signin)
 

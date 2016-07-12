@@ -1,5 +1,6 @@
 # 公告板 (./bc)
 
+```
 get: {
   null
 }
@@ -8,10 +9,11 @@ return (
   {
     'state': 'hello world!'
   }
-)
+)```
 
 # 欢迎页 (./wp)
 
+```
 get: {
   'name': { name },
   'gender': ['m'|'f']
@@ -27,14 +29,15 @@ return (
     'state': 'hello, [Mr|Ms]. {name}!'
   }
 )
+```
 
 
 
 # 注册 (./signup)
 
+```
 post: {
-  'name' : { name }
-  'token': { token }
+  'name' : { name },
 }
 
 return (
@@ -47,14 +50,14 @@ return (
     'codeState' : { ...codeState }
   }
 )
-
+```
 
 
 # 登陆 (./signin)
 
+```
 post: {
-  'name' : { name }
-  'token': { token }
+  'name' : { name },
 }
 
 return (
@@ -67,13 +70,14 @@ return (
     'codeState' : { ...codeState }
   }
 )
-
+```
 
 # 记事本 (./note)
 
 
 ## (./note/add)
 
+```
 post: {
   'userid' : { userid },
   'title': { title },
@@ -90,10 +94,11 @@ return: (
     'codeState' : { ...codeState }
   }
 )
-
+```
 
 ## (./note/update)
 
+```
 post: {
   'userid' : { userid },
   'noteid': { noteid },
@@ -111,10 +116,11 @@ return: (
     'codeState' : { ...codeState }
   }
 )
-
+```
 
 ## (./note/show)
 
+```
 post: {
   'userid': { userid },
 }
@@ -129,10 +135,11 @@ return: (
     'codeState' : { ...codeState }
   }
 )
-
+```
 
 ## (./note/query)
 
+```
 post: {
   'noteid': { noteid },
 }
@@ -150,14 +157,14 @@ return: (
     'codeState' : { ...codeState }
   }
 )
-
+```
 
 ## (./note/del)
 
+```
 post: {
   'userid': { userid },
   'noteid': { noteid },
-  'token': { token },
 }
 
 return: (
@@ -169,3 +176,4 @@ return: (
     'codeState' : { ...codeState }
   }
 )
+```

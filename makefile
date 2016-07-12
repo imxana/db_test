@@ -15,7 +15,7 @@ si:
 na:
 	@curl -d 'userid=Yvo1D5X9p4c58GAJ&title=imodo&content=hmm!' 'http://localhost:3000/note/add'
 nd:
-	@curl -d 'userid=Yvo1D5X9p4c58GAJ&noteid=fzfBYbbmKLErqwRl' 'http://localhost:3000/note/del'
+	@curl -d 'userid=Yvo1D5X9p4c58GAJ&noteid=SrD4p6qbrL9JGEdv' 'http://localhost:3000/note/del'
 ns:
 	@curl -d 'userid=Yvo1D5X9p4c58GAJ' 'http://localhost:3000/note/show'
 nq:

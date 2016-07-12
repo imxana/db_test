@@ -78,7 +78,6 @@ post: {
   'userid' : { userid },
   'title': { title },
   'content': { content },
-  'time' : { time }
 }
 
 return: (
@@ -91,6 +90,29 @@ return: (
     'codeState' : { ...codeState }
   }
 )
+
+
+## (./note/update)
+
+post: {
+  'userid' : { userid },
+  'noteid': { noteid },
+  'title': { title },
+  'content': { content },
+}
+
+return: (
+  suc: {
+    'code': '1',
+    'noteid': { noteid },
+  }
+  fail:{
+    'code': { ErrorCode },
+    'codeState' : { ...codeState }
+  }
+)
+
+
 ## (./note/show)
 
 post: {
@@ -108,20 +130,20 @@ return: (
   }
 )
 
+
 ## (./note/query)
 
 post: {
   'noteid': { noteid },
-  'token': { token }
 }
 
 return: (
   suc: {
     'code': '1',
-    'userid': { userid }
+    'userid': { userid },
     'title': { title },
     'content': { content },
-    'time' : { time }
+    'time' : { add-time }
   }
   fail:{
     'code': { ErrorCode },
@@ -133,9 +155,9 @@ return: (
 ## (./note/del)
 
 post: {
-  'userid': { userid }
+  'userid': { userid },
   'noteid': { noteid },
-  'token': { token }
+  'token': { token },
 }
 
 return: (

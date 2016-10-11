@@ -20,3 +20,9 @@ ns:
 	@curl -d 'userid=Yvo1D5X9p4c58GAJ' 'http://localhost:3000/note/show'
 nq:
 	@curl -d 'noteid=E5z3Szl0PMDbxGSY' 'http://localhost:3000/note/query'
+ip:
+		@ifconfig | grep "inet " | grep -v 127.0.0.1
+lcj:
+		@ssh ubuntu@myfickle.cn 
+ssh:
+		@ssh root@139.129.24.151

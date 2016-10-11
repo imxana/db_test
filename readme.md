@@ -1,3 +1,3 @@
 ## database test
 
-This is mongodb + nodejs, a universal backend, just tested for some showing demo..
+MongoDB + Nodejs, an easy universal backend, just tested for some showing demo..
